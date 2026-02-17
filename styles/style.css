@@ -2,4 +2,157 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+    min-block-size: 100%;
+    max-inline-size: 1440px;
+    margin: 0 auto;
+    background-image: url("../slozhno-sosredatochitsiya-template/images/cover-image-dark.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+}
+.header {
+    display: grid;
+    gap: 20px;
+    min-block-size: 100vh;
+    position: relative;
+    padding: 10px;
+    background-image: var(--bg-image);
+
+}
+
+.header__title {
+    color: var(--head-title-color);
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-shadow: 4px 4px 0 var(--accent-color);
+    line-height: 83%;
+    margin-block-start: 230px;
+    margin-inline-start: 18px;
+    font-family: 'IBM Plex mono';
+    font-weight: bold;
+    white-space: wrap;
+}
+.rec {
+    position: absolute;
+    top: 10px;
+    right: 19px;
+    color: var(--accent-color);
+}
+
+.rec::before {
+    content: "REC";
+    font-family: 'IBM Plex mono';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+
+}
+
+.rec::after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: var(--accent-color);
+    display: inline-block;
+    border-radius: 50%;
+    margin-inline-start: 10px;
+    margin-block-start: 7px;
+    box-shadow: 0 0 4px 2px var(--accent-color);
+    vertical-align: top;
+}
+
+
+
+
+.header__theme-menu {
+    position: absolute;
+    top: 75px;
+    left: 295px;
+}
+
+.header__theme-menu-button {
+    color: var(--accent-color);
+    border: 1px solid transparent;
+    font-size: 21px;
+    line-height: 18px;
+    transition: transform 0.3s ease;
+    background-color: transparent;
+    width: 70px;
+    text-transform: lowercase;
+    padding: 3px 13px;
+    letter-spacing: 1px;
+}
+
+.header__theme-menu-button:hover {
+    transform: scale(1.1);
+}
+
+.header__theme-menu-button_active {
+    border-color: var(--accent-color);
+    pointer-events: none;
+}
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.header__text {
+    margin-block-end: 66px;
+
+}
+.title-decor {
+
+    background: var(--accent-color);
+    color: var(--bg-color);
+
+    font-family: IBM Plex Mono;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin-block-end: 10px;
+    margin-block-start: 10px;
+}
+.decorated-zone {
+    position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--accent-color);
+}
+
+.decorated-zone::before {
+    top: 10px;
+    right: 10px;
+    border-inline-start: none;
+    border-block-end: none;
+}
+
+.decorated-zone::after {
+    bottom: 37px;
+    left: 10px;
+    border-inline-end: none;
+    border-block-start: none;
+}
+
+main {
+    padding: 10px;
+}
+h3 {
+    font-family: IBM Plex mono;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 18px;
+    line-height: 23.4px;
+    color: rgba(255, 0, 112, 1);
+
+}
+
+p {
+    color: rgba(241, 178, 206, 1);
 }
